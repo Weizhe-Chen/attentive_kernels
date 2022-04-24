@@ -1,0 +1,15 @@
+# Experiment Settings
+seed: 0
+num-train-iter: 1000
+# Kernel Settings
+kernel: lengthscale_selection
+init-amplitude: 1.0
+init-lengthscale: 0.1
+init-noise: 0.01
+dim-input: 1
+dim-hidden: 8
+dim-output: 10
+min-lengthscale: 0.01
+max-lengthscale: 0.11
+lr-hyper: 0.2
+lr-nn: 0.02
