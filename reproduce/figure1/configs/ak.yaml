@@ -1,0 +1,22 @@
+#Experiment Settings
+seed: 0
+kernel: ak
+sensing-rate: 1.0
+env-extent: [0.0, 1.0, 0.0, 1.0]
+task-extent: [0.0, 1.0, 0.0, 1.0]
+eval-grid: [100, 100]
+noise-scale: 1.0
+max-num-samples: 300
+num-train-iter: 1000
+
+# Kernel Settings
+init-amplitude: 1.0
+init-lengthscale: 0.5
+init-noise: 0.1
+lr-hyper: 0.01
+lr-nn: 0.001
+dim-input: 2
+dim-hidden: 10
+dim-output: 10
+min-lengthscale: 0.01
+max-lengthscale: 0.5
