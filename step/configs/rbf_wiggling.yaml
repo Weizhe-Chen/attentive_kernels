@@ -1,0 +1,10 @@
+# Experiment Settings
+seed: 0
+num-train-iter: 1000
+# Kernel Settings
+kernel: rbf
+postfix: _wiggling
+init-amplitude: 1.0
+init-lengthscale: 0.1
+init-noise: 0.01
+lr-hyper: 0.2

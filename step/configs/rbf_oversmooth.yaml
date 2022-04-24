@@ -1,0 +1,10 @@
+# Experiment Settings
+seed: 0
+num-train-iter: 1000
+# Kernel Settings
+kernel: rbf
+postfix: _oversmooth
+init-amplitude: 1.0
+init-lengthscale: 1.0
+init-noise: 1.0
+lr-hyper: 0.2
