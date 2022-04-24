@@ -1,13 +1,13 @@
 from pathlib import Path
 from urllib import request
-import rasterio
-from skimage import transform
+
 import numpy as np
-import pypolo
+import rasterio
 from scipy.io import savemat
+from skimage import transform
 
+import pypolo
 from parse_arguments import parse_arguments
-
 
 
 def download_helens():
