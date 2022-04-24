@@ -1,0 +1,9 @@
+mathtext.fontset: cm
+text.usetex: True
+pdf.fonttype: 42
+font.family: serif
+font.size: 10
+axes.labelsize: 10
+legend.fontsize: 8
+xtick.labelsize: 8
+ytick.labelsize: 8
