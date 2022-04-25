@@ -1,0 +1,29 @@
+# Kernel Settings
+kernel: ak
+postfix: _h_7
+init-amplitude: 1.0
+init-lengthscale: 0.5
+init-noise: 1.0
+lr-hyper: 0.01
+lr-nn: 0.001
+
+dim-input: 2
+dim-hidden: 7  # changed here!
+dim-output: 10
+min-lengthscale: 0.01
+max-lengthscale: 0.5
+
+# Experiment Settings
+max-num-samples: 700
+num-init-samples: 50
+noise-scale: 1.0
+tolerance: 0.1
+max-lin-vel: 1.0
+control-rate: 10.0
+sensing-rate: 1.0
+eval-grid: [50, 50]
+env-extent: [-11.0, 11.0, -11.0, 11.0]
+task-extent: [-10.0, 10.0, -10.0, 10.0]
+
+# Strategy Settings
+num-candidates: 1000
