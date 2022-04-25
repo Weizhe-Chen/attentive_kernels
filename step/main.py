@@ -17,9 +17,9 @@ def rbf(dist, lengthscale):
 class LengthscaleSelectionKernel(pypolo.kernels.AK):
 
     def __init__(self, amplitude, lengthscales, dim_input, dim_hidden,
-                 dim_output, use_softmax):
+                 dim_output):
         super().__init__(amplitude, lengthscales, dim_input, dim_hidden,
-                         dim_output, use_softmax)
+                         dim_output)
 
     def forward(self, x_1, x_2):
         dist = torch.cdist(x_1, x_2, p=2)
@@ -35,14 +35,14 @@ class LengthscaleSelectionKernel(pypolo.kernels.AK):
 class AK2(pypolo.kernels.IKernel):
 
     def __init__(self, amplitude, lengthscales, dim_input, dim_hidden,
-                 dim_output, use_softmax):
+                 dim_output):
         super().__init__(amplitude)
         self.lengthscales = lengthscales
         print("AK primitive lengthscales: ", self.lengthscales)
         self.nn_ls = pypolo.kernels.TwoHiddenLayerTanhNN(
-            dim_input, dim_hidden, dim_output, use_softmax).double()
+            dim_input, dim_hidden, dim_output).double()
         self.nn_is = pypolo.kernels.TwoHiddenLayerTanhNN(
-            dim_input, dim_hidden, dim_output, use_softmax).double()
+            dim_input, dim_hidden, dim_output).double()
         self.train_instance_selection = True
 
     @property
@@ -75,11 +75,11 @@ class AK2(pypolo.kernels.IKernel):
         return cov_mat
 
 
-def get_data():
-    x_train = np.load("./data/x_train.npy")
-    y_train = np.load("./data/y_train.npy")
-    x_test = np.load("./data/x_test.npy")
-    y_test = np.load("./data/y_test.npy")
+def get_data(data_path):
+    x_train = np.load(f"{data_path}/x_train.npy")
+    y_train = np.load(f"{data_path}/y_train.npy")
+    x_test = np.load(f"{data_path}/x_test.npy")
+    y_test = np.load(f"{data_path}/y_test.npy")
     return x_train, y_train, x_test, y_test
 
 
@@ -100,7 +100,6 @@ def get_kernel(args):
             dim_input=args.dim_input,
             dim_hidden=args.dim_hidden,
             dim_output=args.dim_output,
-            use_softmax=args.ak_use_softmax,
         )
     elif args.kernel == "ak2":
         kernel = AK2(
@@ -113,7 +112,6 @@ def get_kernel(args):
             dim_input=args.dim_input,
             dim_hidden=args.dim_hidden,
             dim_output=args.dim_output,
-            use_softmax=args.ak_use_softmax,
         )
     else:
         raise ValueError(f"Kernel {args.kernel} is not supported.")
@@ -258,7 +256,7 @@ def main():
     args = parse_arguments()
     Path(args.figure_dir).mkdir(parents=True, exist_ok=True)
     pypolo.experiments.utilities.seed_everything(args.seed)
-    data = get_data()
+    data = get_data("../data/step/")
     model = get_model(args, *data[:2])
     optimize_model(args, model, verbose=True)
     plot_results(args, data, model)

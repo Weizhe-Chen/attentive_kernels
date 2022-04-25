@@ -4,8 +4,6 @@ from matplotlib import pyplot as plt
 import numpy as np
 from pypolo.utilities.scalers import MinMaxScaler, StandardScaler
 
-plt.style.use(["science", "nature"])
-
 # Demo configurations
 num_trains = [30, 30, 50, 30, 30]
 eps = 0.0
@@ -85,9 +83,10 @@ fig.savefig(f"./figures/data.pdf", bbox_inches="tight")
 plt.close(fig)
 
 # Saving
-Path("./data/").mkdir(parents=True, exist_ok=True)
-np.save("./data/x_train.npy", x_train)
-np.save("./data/y_train.npy", y_train)
-np.save("./data/x_test.npy", x_test)
-np.save("./data/y_test.npy", y_test)
+data_path = "../data/step/"
+Path(data_path).mkdir(parents=True, exist_ok=True)
+np.save(f"{data_path}/x_train.npy", x_train)
+np.save(f"{data_path}/y_train.npy", y_train)
+np.save(f"{data_path}/x_test.npy", x_test)
+np.save(f"{data_path}/y_test.npy", y_test)
 print("Data saved to ./data/")

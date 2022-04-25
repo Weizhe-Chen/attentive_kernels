@@ -1,4 +1,4 @@
-import torch
+from pathlib import Path
 from time import time
 import pypolo
 import numpy as np
@@ -107,7 +107,10 @@ def save(args, evaluator, logger):
 def main():
     args = pypolo.experiments.argparser.parse_arguments()
     rng = pypolo.experiments.utilities.seed_everything(args.seed)
-    env = pypolo.experiments.environments.get_environment(args.env_name)
+    data_path = "../data/srtm"
+    Path(data_path).mkdir(exist_ok=True, parents=True)
+    env = pypolo.experiments.environments.get_environment(
+        args.env_name, data_path)
     sensor = get_sensor(args, env)
     x_init, y_init = get_pilot_data(args, rng, sensor)
     robot = get_robot(x_init, args)

@@ -6,9 +6,9 @@ addpath(genpath("outputs"));
 [X1, X2] = meshgrid(0: 0.01: 1 - 0.01, 0: 0.01: 1 - 0.01);
 
 % Visualize environment
-raw_data = readNPY('./environments/preprocessed/helens.npy');
-x_train = readmatrix('./environments/preprocessed/x_train.csv');
-y_train = readmatrix('./environments/preprocessed/y_train.csv');
+raw_data = readNPY('../data/volcano/preprocessed/helens.npy');
+x_train = readmatrix('../data/volcano/preprocessed/x_train.csv');
+y_train = readmatrix('../data/volcano/preprocessed/y_train.csv');
 plot_map(X1, X2, raw_data, 'env', x_train, y_train);
 
 % Visualize RBF

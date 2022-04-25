@@ -2,16 +2,16 @@ from pathlib import Path
 from urllib import request
 
 import numpy as np
-import rasterio
+#  import rasterio
 from scipy.io import savemat
-from skimage import transform
+#  from skimage import transform
 
 import pypolo
 from parse_arguments import parse_arguments
 
 
-def download_helens():
-    path = Path(f"./environments/raw/mtsthelens_after.zip")
+def download_helens(data_path):
+    path = Path(f"{data_path}/raw/mtsthelens_after.zip")
     if not path.is_file():
         print(f"Downloading to {path}...this step might take some time.")
         request.urlretrieve(
@@ -22,28 +22,34 @@ def download_helens():
         print("Done")
     import zipfile
     with zipfile.ZipFile(path, 'r') as zip_ref:
-        zip_ref.extractall("./environments/raw/")
+        zip_ref.extractall(f"{data_path}/raw/")
 
 
-def preprocess_helens():
-    name = "helens"
-    print(f"Preprocessing {name}...")
-    raster = rasterio.open("./environments/raw/10.2.1.1043901.dem")
-    array = raster.read(1).astype(np.float64)  # type: ignore
-    resized = transform.resize(array, output_shape=(129, 129))
-    resized = resized[15:-14, 15:-14]  # Exclude extreme values at the boundary
-    save_path = f"./environments/preprocessed/{name}.npy"
-    np.save(save_path, resized)
-    print(f"Saved to {save_path}.")
+# preprocess_helens requires rasterio and scikit-image.
+# rasterio might be tricky to install, so we've provided the preprocessed data
+# and commented this function
+
+#  def preprocess_helens(data_path):
+#      name = "helens"
+#      print(f"Preprocessing {name}...")
+#      raster = rasterio.open(f"{data_path}/raw/10.2.1.1043901.dem")
+#      array = raster.read(1).astype(np.float64)  # type: ignore
+#      resized = transform.resize(array, output_shape=(129, 129))
+#      resized = resized[15:-14, 15:-14]  # Exclude extreme values at the boundary
+#      save_path = f"{data_path}/preprocessed/{name}.npy"
+#      np.save(save_path, resized)
+#      print(f"Saved to {save_path}.")
 
 
-def get_environment():
-    path = Path(f"./environments/preprocessed/helens.npy")
-    if not path.is_file():
-        Path("./environments/raw").mkdir(parents=True, exist_ok=True)
-        Path("./environments/preprocessed").mkdir(parents=True, exist_ok=True)
-        download_helens()
-        preprocess_helens()
+def get_environment(data_path):
+    path = Path(f"{data_path}/preprocessed/helens.npy")
+    # Uncomment the following block if you would like to download and process
+    # the DEM file. Packages required for this step: rasterio, scikit-image
+    #  if not path.is_file():
+    #      Path(f"{data_path}/raw").mkdir(parents=True, exist_ok=True)
+    #      Path(f"{data_path}/preprocessed").mkdir(parents=True, exist_ok=True)
+    #      download_helens(data_path)
+    #      preprocess_helens(data_path)
     data_loader = pypolo.experiments.environments.DataLoader(str(path))
     return data_loader.get_data()
 
@@ -58,10 +64,10 @@ def get_sensor(args, env):
     return sensor
 
 
-def get_data(args, rng, sensor):
+def get_data(args, rng, sensor, data_path):
     """Returns the training data."""
-    x_path = Path("./environments/preprocessed/x_train.csv")
-    y_path = Path("./environments/preprocessed/y_train.csv")
+    x_path = Path(f"{data_path}/preprocessed/x_train.csv")
+    y_path = Path(f"{data_path}/preprocessed/y_train.csv")
     if x_path.is_file():
         x_train = np.genfromtxt(x_path, delimiter=",")
     else:
@@ -106,11 +112,12 @@ def get_evaluator(args, sensor):
 
 
 def main():
+    data_path = "../data/volcano/"
     args = parse_arguments(verbose=True)
     rng = pypolo.experiments.utilities.seed_everything(args.seed)
-    env = get_environment()
+    env = get_environment(data_path)
     sensor = get_sensor(args, env)
-    x_train, y_train = get_data(args, rng, sensor)
+    x_train, y_train = get_data(args, rng, sensor, data_path)
     model = get_model(args, x_train, y_train)
     model.optimize(num_iter=args.num_train_iter, verbose=True)
     evaluator = get_evaluator(args, sensor)
