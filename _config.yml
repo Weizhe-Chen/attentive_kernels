@@ -1,0 +1,15 @@
+title: "Differential Drive Tracking PID"
+tagline: "Weizhe Chen"
+# When building locally, put an empty string. Otherwise, put "/your-repo-name"
+# (the "/" is important)
+# baseurl: "diff_drive_tracking_pid"
+# arXiv ID (as in "https://arxiv.org/abs/[arXiv id]")
+arxiv: ""
+repo:  "https://github.com/Weizhe-Chen/diff_drive_tracking_pid"
+
+author:
+  name: Weizhe Chen
+  url: "https://weizhechen.com/"
+
+# Leave this as is
+markdown: kramdown
