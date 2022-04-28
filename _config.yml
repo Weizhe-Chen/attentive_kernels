@@ -1,11 +1,11 @@
-title: "Differential Drive Tracking PID"
+title: "AK: Attentive Kernel for Information Gathering"
 tagline: "Weizhe Chen"
 # When building locally, put an empty string. Otherwise, put "/your-repo-name"
 # (the "/" is important)
 # baseurl: "diff_drive_tracking_pid"
 # arXiv ID (as in "https://arxiv.org/abs/[arXiv id]")
 arxiv: ""
-repo:  "https://github.com/Weizhe-Chen/diff_drive_tracking_pid"
+repo:  "https://github.com/Weizhe-Chen/attentive_kernels"
 
 author:
   name: Weizhe Chen
