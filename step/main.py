@@ -38,7 +38,8 @@ class AK2(pypolo.kernels.IKernel):
                  dim_output):
         super().__init__(amplitude)
         self.lengthscales = lengthscales
-        print("AK primitive lengthscales: ", self.lengthscales)
+        np.set_printoptions(precision=2)
+        print("Primitive lengthscales: ", self.lengthscales)
         self.nn_ls = pypolo.kernels.TwoHiddenLayerTanhNN(
             dim_input, dim_hidden, dim_output).double()
         self.nn_is = pypolo.kernels.TwoHiddenLayerTanhNN(
@@ -60,6 +61,7 @@ class AK2(pypolo.kernels.IKernel):
 
     def forward(self, x_1, x_2):
         dist = torch.cdist(x_1, x_2, p=2)
+        # Train instance selection first, and then lengthscale selection.
         if self.train_instance_selection:
             w_1, z_1 = self.get_representations(x_1, detach_w=True)
             w_2, z_2 = self.get_representations(x_2, detach_w=True)
