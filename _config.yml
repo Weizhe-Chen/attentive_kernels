@@ -1,14 +1,14 @@
 title: "AK: Attentive Kernel for Information Gathering"
-tagline: "Weizhe Chen"
+tagline: "Weizhe Chen, Roni Khardon, Lantao Liu"
 # When building locally, put an empty string. Otherwise, put "/your-repo-name"
 # (the "/" is important)
 # baseurl: "diff_drive_tracking_pid"
 # arXiv ID (as in "https://arxiv.org/abs/[arXiv id]")
 arxiv: ""
-repo:  "https://github.com/Weizhe-Chen/attentive_kernels"
+repo:  "https://github.com/weizhe-chen/attentive_kernels"
 
 author:
-  name: Weizhe Chen
+  name: Weizhe Chen, Roni Khardon, Lantao Liu
   url: "https://weizhechen.com/"
 
 # Leave this as is

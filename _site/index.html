@@ -3,7 +3,7 @@
   
   <head>
   <meta charset="UTF-8">
-  <title>Differential Drive Tracking PID</title>
+  <title>AK: Attentive Kernel for Information Gathering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#990000">
   <link rel="stylesheet" href="/css/normalize.css">
@@ -17,138 +17,207 @@
 
   <body>
     <section class="page-header">
-  <img src="/assets/favicon.ico" width="100" height="100">
-  <h1 class="project-name">Differential Drive Tracking PID</h1>
+  <img src="/assets/trident.png" width="100" height="100">
+  <h1 class="project-name">AK: Attentive Kernel for Information Gathering</h1>
   <h2 class="project-tagline">Weizhe Chen</h2>
-  <a href="https://github.com/Weizhe-Chen/diff_drive_tracking_pid" class="btn">View on GitHub</a>
-  <a href="https://github.com/Weizhe-Chen/diff_drive_tracking_pid/zipball/master" class="btn">Download .zip</a>
-  <a href="https://github.com/Weizhe-Chen/diff_drive_tracking_pid/tarball/master" class="btn">Download .tar.gz</a>
+  <a href="https://arxiv.org/" class="btn">arXiv coming soon</a>
+  <a href="https://github.com/Weizhe-Chen/attentive_kernels" class="btn">View on GitHub</a>
+  <a href="https://github.com/Weizhe-Chen/attentive_kernels/zipball/master" class="btn">Download .zip</a>
+  <a href="https://github.com/Weizhe-Chen/attentive_kernels/tarball/master" class="btn">Download .tar.gz</a>
 </section>
 
 
     <section class="main-content">
       
-      <p>This is a simple PID controller written in Python3 for controlling differential-drive vehicles, such as <a href="https://www.clearpathrobotics.com/assets/guides/melodic/heron/index.html">Heron Unmanned Surface Vehicle (USV)</a>, <a href="http://www.clearpathrobotics.com/assets/guides/noetic/jackal/">Jackal Unmanned Ground Vehicle (UGV)</a>, and <a href="https://www.clearpathrobotics.com/assets/guides/kinetic/husky/index.html">Husky UGV</a> to a desired position/waypoint. We will use the Jackal simulator as a running example.</p>
+      <h1 id="table-of-contents">Table of contents</h1>
+
+<ul>
+  <li><a href="#abstract">Abstract</a></li>
+  <li><a href="#field_experiment">Field Experiment</a></li>
+  <li><a href="#simulated_experiments">Simulated Experiment</a>
+    <ul>
+      <li><a href="#N17E073">Environment N17E073</a></li>
+      <li><a href="#N43W080">Environment N43W080</a></li>
+      <li><a href="#N45W123">Environment N45W123</a></li>
+      <li><a href="#N47W124">Environment N47W124</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><a name="abstract"></a></p>
+<h1 id="abstract">Abstract</h1>
+<p>Robotic Information Gathering (RIG) relies on the uncertainty of a probabilistic model to identify critical areas for efficient data collection. Gaussian processes (GPs) with stationary kernels have been widely adopted for spatial modeling. However, real-world spatial data typically does not satisfy the assumption of stationarity, where different locations are assumed to have the same degree of variability. As a result, the prediction uncertainty does not accurately capture prediction error, limiting the success of RIG algorithms. We propose a novel family of nonstationary kernels, named the Attentive Kernel (AK), which is simple, robust, and can extend any existing kernel to a nonstationary one. We evaluate the new kernel in elevation mapping tasks, where AK provides better accuracy and uncertainty quantification over the commonly used RBF kernel and other popular nonstationary kernels. The improved uncertainty quantification guides the downstream RIG planner to collect more valuable data around the high-error area, further increasing prediction accuracy. A field experiment demonstrates that the proposed method can guide an Autonomous Surface Vehicle (ASV) to prioritize data collection in locations with high spatial variations, enabling the model to characterize the salient environmental features.</p>
+
+<hr />
+
+<p><a name="field_experiment"></a></p>
+<h1 id="field-experiment">Field Experiment</h1>
+<div class="embed-container">
+  <p align="center">
+  <iframe src="https://www.youtube.com/embed/XYxEubfIayM" width="700" height="480" frameborder="0" allowfullscreen="">
+  </iframe>
+  </p>
+</div>
+
+<hr />
+
+<p><a name="simulated_experiments"></a></p>
+<h1 id="simulated-experiments">Simulated Experiments</h1>
+
+<p><a name="N17E073"></a></p>
+<h2 id="environment-n17e073">Environment: N17E073</h2>
+
+<p align="center"><img src="./assets/envs/N17E073.png" width="400" height="240" /></p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: center">Heron USV</th>
-      <th style="text-align: center">Jackal UGV</th>
-      <th style="text-align: center">Husky UGV</th>
+      <th style="text-align: center">Attentive Kernel</th>
+      <th style="text-align: center">RBF Kernel</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center"><img src="https://www.clearpathrobotics.com/assets/guides/melodic/heron/_images/heron_banner.jpg" width="300" height="100" /></td>
-      <td style="text-align: center"><img src="http://www.clearpathrobotics.com/assets/guides/noetic/jackal/_images/jackal_banner.png" width="300" height="100" /></td>
-      <td style="text-align: center"><img src="https://www.clearpathrobotics.com/assets/guides/kinetic/husky/_images/TJM_5949_00001.jpg" width="300" height="100" /></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/P92J6NmZeK0"><img src="/assets/play_buttons/N17E073_ak.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/_94lIe7usx8"><img src="/assets/play_buttons/N17E073_rbf.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Gibbs Kernel</th>
+      <th style="text-align: center">Deep Kernel Learning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="400" height="240" /></a></td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<h1 id="table-of-contents">Table of contents</h1>
+<p><a name="N43W080"></a></p>
+<h2 id="environment-n43w080">Environment: N43W080</h2>
 
-<ul>
-  <li><a href="#jackal">Jackal Simulator</a></li>
-  <li><a href="#pid">Tracking PID Controller</a></li>
-  <li><a href="#rviz">(Optional) Configuration of RViz</a></li>
-</ul>
+<p align="center"><img src="./assets/envs/N43W080.png" width="400" height="240" /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Attentive Kernel</th>
+      <th style="text-align: center">RBF Kernel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/_4oyuKxFBkY"><img src="/assets/play_buttons/N43W080_ak.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/lx8haGg0aCI"><img src="/assets/play_buttons/N43W080_rbf.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Gibbs Kernel</th>
+      <th style="text-align: center">Deep Kernel Learning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/5yDTqPvQ9QM"><img src="/assets/play_buttons/N43W080_gibbs.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/ZK28mCQYVUQ"><img src="/assets/play_buttons/N43W080_dkl.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 
-<p><a name="jackal"></a></p>
+<p><a name="N45W123"></a></p>
+<h2 id="environment-n45w123">Environment: N45W123</h2>
 
-<h1 id="jackal-simulation">Jackal Simulation</h1>
+<p align="center"><img src="./assets/envs/N45W123.png" width="400" height="240" /></p>
 
-<p>To install Jackal simulator, make sure you have a working ROS installation on your Ubuntu desktop. We use Ubuntu 18.04 which corresponds to ROS <code class="language-plaintext highlighter-rouge">melodic</code>. Change the ROS distribution accordingly based on your OS version, and install the following Jackal simulator packages:</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Attentive Kernel</th>
+      <th style="text-align: center">RBF Kernel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/BtKDLO1asnk"><img src="/assets/play_buttons/N45W123_ak.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/eegdZR_M_zs"><img src="/assets/play_buttons/N45W123_rbf.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Gibbs Kernel</th>
+      <th style="text-align: center">Deep Kernel Learning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/Z71hU4YbWs0"><img src="/assets/play_buttons/N45W123_gibbs.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/Qbk63_b2P1E"><img src="/assets/play_buttons/N45W123_dkl.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Make sure your <code class="language-plaintext highlighter-rouge">~/.bashrc</code> has the following settings and remember to <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code> after modifying it:</p>
+<hr />
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">ROS_MASTER_URI</span><span class="o">=</span>http://localhost:11311
-<span class="nb">export </span><span class="nv">ROS_HOSTNAME</span><span class="o">=</span>localhost
-</code></pre></div></div>
+<p><a name="N47W124"></a></p>
+<h2 id="environment-n47w124">Environment: N47W124</h2>
 
-<p>To launch simulated Jackal in an empty world, run the following command:</p>
+<p align="center"><img src="./assets/envs/N47W124.png" width="400" height="240" /></p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Terminal #1</span>
-roslaunch jackal_gazebo empty_world.launch
-</code></pre></div></div>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Attentive Kernel</th>
+      <th style="text-align: center">RBF Kernel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/CC9St05e9Ow"><img src="/assets/play_buttons/N47W124_ak.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/W1bnETwBtpI"><img src="/assets/play_buttons/N47W124_rbf.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p>We should see the simulated vehicle on an open ground.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Gibbs Kernel</th>
+      <th style="text-align: center">Deep Kernel Learning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/mqtxNkIv6bI"><img src="/assets/play_buttons/N47W124_gibbs.png" alt="drawing" width="400" height="240" /></a></td>
+      <td style="text-align: center"><br /><a href="https://www.youtube.com/embed/suYUdUDMzTE"><img src="/assets/play_buttons/N47W124_dkl.png" alt="drawing" width="400" height="240" /></a></td>
+    </tr>
+  </tbody>
+</table>
 
-<p><img src="./assets/gazebo.png" alt="gazebo" /></p>
-
-<p><a name="pid"></a></p>
-
-<h1 id="tracking-pid-controller">Tracking PID Controller</h1>
-
-<p>ROS Melodic does not support Python3 natively but our code is written in Python3. To bypass this problem, we can install ROS Noetic in a conda environment following the instructions given by <a href="https://github.com/RoboStack/ros-noetic">RoboStack</a>. If your ROS distribution supports Python3 or you have an existing conda environment, feel free to skip this step. Assuming that you have a ROS noetic conda environment called <code class="language-plaintext highlighter-rouge">robostackenv</code>, clone and build the <code class="language-plaintext highlighter-rouge">tracking_pid</code> package in a <code class="language-plaintext highlighter-rouge">catkin</code> workspace.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Terminal #2</span>
-conda activate robostackenv
-<span class="nb">mkdir</span> <span class="nt">-p</span> ~/robostack_ws/src
-<span class="nb">cd</span> ~/robostack_ws/src
-git clone https://github.com/Weizhe-Chen/tracking_pid.git
-<span class="nb">cd</span> ..
-catkin build
-<span class="nb">.</span> devel/setup.bash  <span class="c"># `.` is equivalent to `source`</span>
-rosrun tracking_pid tracking_pid_node.py
-</code></pre></div></div>
-
-<p>If everything goes well, we shall see the following terminal output, showing the robot’s pose.</p>
-
-<p><img src="./assets/console_state.png" alt="terminal_state" /></p>
-
-<p>Open another terminal (terminal #3), run <code class="language-plaintext highlighter-rouge">rviz</code> → select <code class="language-plaintext highlighter-rouge">File</code> → <code class="language-plaintext highlighter-rouge">Open Config</code> → find <code class="language-plaintext highlighter-rouge">jackal.rviz</code> in <code class="language-plaintext highlighter-rouge">tracking_pid/rviz/</code>.</p>
-
-<p><img src="./assets/rviz.png" alt="rviz" /></p>
-
-<p>Now we can send a goal using the <code class="language-plaintext highlighter-rouge">2D Nav Goal</code> tool.</p>
-
-<p><img src="./assets/demo.gif" alt="rviz" /></p>
-
-<p>We can adjust the controller parameters on-the-fly using <code class="language-plaintext highlighter-rouge">rqt_reconfigure</code>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosrun rqt_reconfigure rqt_reconfigure
-</code></pre></div></div>
-
-<p><img src="/assets/rqt_reconfigure.png" alt="reconfigure" /></p>
-
-<p><a name="rviz"></a></p>
-<h1 id="optional-configuration-of-rviz">(Optional) Configuration of RViz</h1>
-
-<p>In case opening <code class="language-plaintext highlighter-rouge">jackal.rviz</code> does not work, we can configure RViz manually via the following steps. Open a new terminal and run <code class="language-plaintext highlighter-rouge">rviz</code>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rviz
-</code></pre></div></div>
-
-<p><img src="./assets/rviz_0.png" alt="rviz_0" /></p>
-
-<p>Change the <code class="language-plaintext highlighter-rouge">Fixed Frame</code> to <code class="language-plaintext highlighter-rouge">odom</code>.</p>
-
-<p><img src="./assets/rviz_1.png" alt="rviz_1" /></p>
-
-<p>Add a <code class="language-plaintext highlighter-rouge">RobotModel</code>.</p>
-
-<p><img src="./assets/rviz_2.png" alt="rviz_2" /></p>
-
-<p>Add marker for visualizing the goal/waypoint.</p>
-
-<p><img src="./assets/rviz_3.png" alt="rviz_3" /></p>
-
-<p>Change the marker topic to <code class="language-plaintext highlighter-rouge">/waypoint_marker</code></p>
-
-<p><img src="./assets/rviz_4.png" alt="rviz_4" /></p>
+<hr />
 
 
       <footer class="site-footer">
-  <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/pietromenna/jekyll-cayman-theme">Cayman theme</a> by <a href="http://github.com/jasonlong">Jason Long</a>.</span>
+  <span class="site-footer-credits"><a href="https://vail.sice.indiana.edu/">VAIL: Vehicle Autonomy and Intelligence Lab</a></span>
+  and
+  <span class="site-footer-credits"><a href="https://cgi.luddy.indiana.edu/~rkhardon/index.php">Roni Khardon's Research Group</a></span>
+
 </footer>
 
 

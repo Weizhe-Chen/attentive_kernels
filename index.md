@@ -1,114 +1,91 @@
 ---
 layout: default
 title: {{ site.name }}
+youtubeId: XYxEubfIayM
 ---
 
-This is a simple PID controller written in Python3 for controlling differential-drive vehicles, such as [Heron Unmanned Surface Vehicle (USV)](https://www.clearpathrobotics.com/assets/guides/melodic/heron/index.html), [Jackal Unmanned Ground Vehicle (UGV)](http://www.clearpathrobotics.com/assets/guides/noetic/jackal/), and [Husky UGV](https://www.clearpathrobotics.com/assets/guides/kinetic/husky/index.html) to a desired position/waypoint. We will use the Jackal simulator as a running example.
-
-Heron USV | Jackal UGV | Husky UGV
-:-------------------------:|:-------------------------:|:-------------------------:
-<img src="https://www.clearpathrobotics.com/assets/guides/melodic/heron/_images/heron_banner.jpg" width="300" height="100"/> |  <img src="http://www.clearpathrobotics.com/assets/guides/noetic/jackal/_images/jackal_banner.png" width="300" height="100"/> | <img src="https://www.clearpathrobotics.com/assets/guides/kinetic/husky/_images/TJM_5949_00001.jpg" width="300" height="100"/>
-
----
 
 # Table of contents
 
-* [Jackal Simulator](#jackal)
-* [Tracking PID Controller](#pid)
-* [(Optional) Configuration of RViz](#rviz)
+* [Abstract](#abstract)
+* [Field Experiment](#field_experiment)
+* [Simulated Experiment](#simulated_experiments)
+  * [Environment N17E073](#N17E073)
+  * [Environment N43W080](#N43W080)
+  * [Environment N45W123](#N45W123)
+  * [Environment N47W124](#N47W124)
+
+<a name="abstract"></a>
+# Abstract
+Robotic Information Gathering (RIG) relies on the uncertainty of a probabilistic model to identify critical areas for efficient data collection. Gaussian processes (GPs) with stationary kernels have been widely adopted for spatial modeling. However, real-world spatial data typically does not satisfy the assumption of stationarity, where different locations are assumed to have the same degree of variability. As a result, the prediction uncertainty does not accurately capture prediction error, limiting the success of RIG algorithms. We propose a novel family of nonstationary kernels, named the Attentive Kernel (AK), which is simple, robust, and can extend any existing kernel to a nonstationary one. We evaluate the new kernel in elevation mapping tasks, where AK provides better accuracy and uncertainty quantification over the commonly used RBF kernel and other popular nonstationary kernels. The improved uncertainty quantification guides the downstream RIG planner to collect more valuable data around the high-error area, further increasing prediction accuracy. A field experiment demonstrates that the proposed method can guide an Autonomous Surface Vehicle (ASV) to prioritize data collection in locations with high spatial variations, enabling the model to characterize the salient environmental features.
 
 ---
 
-<a name="jackal"></a>
+<a name="field_experiment"></a>
+# Field Experiment
+{% include youtube-player.html id=page.youtubeId %}
 
-# Jackal Simulation
+---
 
-To install Jackal simulator, make sure you have a working ROS installation on your Ubuntu desktop. We use Ubuntu 18.04 which corresponds to ROS `melodic`. Change the ROS distribution accordingly based on your OS version, and install the following Jackal simulator packages:
+<a name="simulated_experiments"></a>
+# Simulated Experiments
 
-```bash
-sudo apt-get install ros-melodic-jackal-simulator ros-melodic-jackal-desktop ros-melodic-jackal-navigation
-```
+<a name="N17E073"></a>
+## Environment: N17E073
 
-Make sure your `~/.bashrc` has the following settings and remember to `source ~/.bashrc` after modifying it:
+<p align="center"><img src="./assets/envs/N17E073.png" width="400" height="240"/></p>
 
-```bash
-export ROS_MASTER_URI=http://localhost:11311
-export ROS_HOSTNAME=localhost
-```
+Attentive Kernel | RBF Kernel
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/P92J6NmZeK0"><img src="/assets/play_buttons/N17E073_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/_94lIe7usx8"><img src="/assets/play_buttons/N17E073_rbf.png" alt="drawing" width="400" height="240"></a>
 
-To launch simulated Jackal in an empty world, run the following command:
+Gibbs Kernel | Deep Kernel Learning
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="400" height="240"></a>
 
-```bash
-# Terminal #1
-roslaunch jackal_gazebo empty_world.launch
-```
+---
 
-We should see the simulated vehicle on an open ground.
+<a name="N43W080"></a>
+## Environment: N43W080
 
-![gazebo](./assets/gazebo.png)
+<p align="center"><img src="./assets/envs/N43W080.png" width="400" height="240"/></p>
 
+Attentive Kernel | RBF Kernel
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/_4oyuKxFBkY"><img src="/assets/play_buttons/N43W080_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/lx8haGg0aCI"><img src="/assets/play_buttons/N43W080_rbf.png" alt="drawing" width="400" height="240"></a>
 
-<a name="pid"></a>
+Gibbs Kernel | Deep Kernel Learning
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/5yDTqPvQ9QM"><img src="/assets/play_buttons/N43W080_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/ZK28mCQYVUQ"><img src="/assets/play_buttons/N43W080_dkl.png" alt="drawing" width="400" height="240"></a>
 
-# Tracking PID Controller
+---
 
-ROS Melodic does not support Python3 natively but our code is written in Python3. To bypass this problem, we can install ROS Noetic in a conda environment following the instructions given by [RoboStack](https://github.com/RoboStack/ros-noetic). If your ROS distribution supports Python3 or you have an existing conda environment, feel free to skip this step. Assuming that you have a ROS noetic conda environment called `robostackenv`, clone and build the `tracking_pid` package in a `catkin` workspace.
+<a name="N45W123"></a>
+## Environment: N45W123
 
-```bash
-# Terminal #2
-conda activate robostackenv
-mkdir -p ~/robostack_ws/src
-cd ~/robostack_ws/src
-git clone https://github.com/Weizhe-Chen/tracking_pid.git
-cd ..
-catkin build
-. devel/setup.bash  # `.` is equivalent to `source`
-rosrun tracking_pid tracking_pid_node.py
-```
+<p align="center"><img src="./assets/envs/N45W123.png" width="400" height="240"/></p>
 
-If everything goes well, we shall see the following terminal output, showing the robot's pose.
+Attentive Kernel | RBF Kernel
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/BtKDLO1asnk"><img src="/assets/play_buttons/N45W123_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/eegdZR_M_zs"><img src="/assets/play_buttons/N45W123_rbf.png" alt="drawing" width="400" height="240"></a>
 
-![terminal_state](./assets/console_state.png)
+Gibbs Kernel | Deep Kernel Learning
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/Z71hU4YbWs0"><img src="/assets/play_buttons/N45W123_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/Qbk63_b2P1E"><img src="/assets/play_buttons/N45W123_dkl.png" alt="drawing" width="400" height="240"></a>
 
-Open another terminal (terminal #3), run `rviz` &rarr; select `File` &rarr; `Open Config` &rarr; find `jackal.rviz` in `tracking_pid/rviz/`.
+---
 
-![rviz](./assets/rviz.png)
+<a name="N47W124"></a>
+## Environment: N47W124
 
-Now we can send a goal using the `2D Nav Goal` tool.
+<p align="center"><img src="./assets/envs/N47W124.png" width="400" height="240"/></p>
 
-![rviz](./assets/demo.gif)
+Attentive Kernel | RBF Kernel
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/CC9St05e9Ow"><img src="/assets/play_buttons/N47W124_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/W1bnETwBtpI"><img src="/assets/play_buttons/N47W124_rbf.png" alt="drawing" width="400" height="240"></a>
 
-We can adjust the controller parameters on-the-fly using `rqt_reconfigure`:
+Gibbs Kernel | Deep Kernel Learning
+:-------------------------:|:-------------------------:|
+<br><a href="https://www.youtube.com/embed/mqtxNkIv6bI"><img src="/assets/play_buttons/N47W124_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/suYUdUDMzTE"><img src="/assets/play_buttons/N47W124_dkl.png" alt="drawing" width="400" height="240"></a>
 
-```bash
-rosrun rqt_reconfigure rqt_reconfigure
-```
-
-![reconfigure](/assets/rqt_reconfigure.png)
-
-<a name="rviz"></a>
-# (Optional) Configuration of RViz
-
-In case opening `jackal.rviz` does not work, we can configure RViz manually via the following steps. Open a new terminal and run `rviz`:
-
-```bash
-rviz
-```
-
-![rviz_0](./assets/rviz_0.png)
-
-Change the `Fixed Frame` to `odom`.
-
-![rviz_1](./assets/rviz_1.png)
-
-Add a `RobotModel`.
-
-![rviz_2](./assets/rviz_2.png)
-
-Add marker for visualizing the goal/waypoint.
-
-![rviz_3](./assets/rviz_3.png)
-
-Change the marker topic to `/waypoint_marker`
-
-![rviz_4](./assets/rviz_4.png)
+---
