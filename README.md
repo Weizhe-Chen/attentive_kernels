@@ -1,9 +1,11 @@
 # AK: Attentive Kernels for Information Gathering
 This repository contains the code for reproducing the paper `AK: Attentive Kernel for Information Gathering`, published at Robotics: Science and Systems (RSS), 2022.
 
-Field Experiments | Example Environment in Simulation
-:-------------------------:|:-------------------------:|
-<p align="center"><a href="https://www.youtube.com/embed/XYxEubfIayM"><img src="https://raw.githubusercontent.com/Weizhe-Chen/weizhe-chen.github.io/master/images/heron_quarry.png" alt="drawing" width="400" height="240"></a></p>  | <p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N17E073.png" width="400" height="240"/></p>
+<p align="center"><b>Field Experiments</b></p>
+<p align="center"><a href="https://www.youtube.com/embed/XYxEubfIayM"><img src="https://raw.githubusercontent.com/Weizhe-Chen/weizhe-chen.github.io/master/images/heron_quarry.png" alt="drawing" width="400" height="240"></a></p> 
+
+<p align="center"><b>One Example Environment in Simulation</b></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N17E073.png" width="400" height="240"/></p>
 
 Attentive Kernel | RBF Kernel
 :-------------------------:|:-------------------------:|
