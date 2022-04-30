@@ -33,59 +33,59 @@ Robotic Information Gathering (RIG) relies on the uncertainty of a probabilistic
 <a name="N17E073"></a>
 ## Environment: N17E073
 
-<p align="center"><img src="./assets/envs/N17E073.png" width="400" height="240"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N17E073.png" width="400" height="240"/></p>
 
 Attentive Kernel | RBF Kernel
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/P92J6NmZeK0"><img src="/assets/play_buttons/N17E073_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/_94lIe7usx8"><img src="/assets/play_buttons/N17E073_rbf.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/P92J6NmZeK0"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/_94lIe7usx8"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_rbf.png" alt="drawing" width="400" height="240"></a>
 
 Gibbs Kernel | Deep Kernel Learning
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="400" height="240"></a>
 
 ---
 
 <a name="N43W080"></a>
 ## Environment: N43W080
 
-<p align="center"><img src="./assets/envs/N43W080.png" width="400" height="240"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N43W080.png" width="400" height="240"/></p>
 
 Attentive Kernel | RBF Kernel
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/_4oyuKxFBkY"><img src="/assets/play_buttons/N43W080_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/lx8haGg0aCI"><img src="/assets/play_buttons/N43W080_rbf.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/_4oyuKxFBkY"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/lx8haGg0aCI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_rbf.png" alt="drawing" width="400" height="240"></a>
 
 Gibbs Kernel | Deep Kernel Learning
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/5yDTqPvQ9QM"><img src="/assets/play_buttons/N43W080_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/ZK28mCQYVUQ"><img src="/assets/play_buttons/N43W080_dkl.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/5yDTqPvQ9QM"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/ZK28mCQYVUQ"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_dkl.png" alt="drawing" width="400" height="240"></a>
 
 ---
 
 <a name="N45W123"></a>
 ## Environment: N45W123
 
-<p align="center"><img src="./assets/envs/N45W123.png" width="400" height="240"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N45W123.png" width="400" height="240"/></p>
 
 Attentive Kernel | RBF Kernel
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/BtKDLO1asnk"><img src="/assets/play_buttons/N45W123_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/eegdZR_M_zs"><img src="/assets/play_buttons/N45W123_rbf.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/BtKDLO1asnk"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/eegdZR_M_zs"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_rbf.png" alt="drawing" width="400" height="240"></a>
 
 Gibbs Kernel | Deep Kernel Learning
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/Z71hU4YbWs0"><img src="/assets/play_buttons/N45W123_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/Qbk63_b2P1E"><img src="/assets/play_buttons/N45W123_dkl.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/Z71hU4YbWs0"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/Qbk63_b2P1E"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_dkl.png" alt="drawing" width="400" height="240"></a>
 
 ---
 
 <a name="N47W124"></a>
 ## Environment: N47W124
 
-<p align="center"><img src="./assets/envs/N47W124.png" width="400" height="240"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N47W124.png" width="400" height="240"/></p>
 
 Attentive Kernel | RBF Kernel
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/CC9St05e9Ow"><img src="/assets/play_buttons/N47W124_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/W1bnETwBtpI"><img src="/assets/play_buttons/N47W124_rbf.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/CC9St05e9Ow"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_ak.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/W1bnETwBtpI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_rbf.png" alt="drawing" width="400" height="240"></a>
 
 Gibbs Kernel | Deep Kernel Learning
 :-------------------------:|:-------------------------:|
-<br><a href="https://www.youtube.com/embed/mqtxNkIv6bI"><img src="/assets/play_buttons/N47W124_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/suYUdUDMzTE"><img src="/assets/play_buttons/N47W124_dkl.png" alt="drawing" width="400" height="240"></a>
+<br><a href="https://www.youtube.com/embed/mqtxNkIv6bI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/suYUdUDMzTE"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_dkl.png" alt="drawing" width="400" height="240"></a>
 
 ---
