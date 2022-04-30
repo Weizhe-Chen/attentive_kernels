@@ -10,10 +10,10 @@ youtubeId: XYxEubfIayM
 * [Abstract](#abstract)
 * [Field Experiment](#field_experiment)
 * [Simulated Experiment](#simulated_experiments)
-  * [Environment N17E073](#N17E073)
-  * [Environment N43W080](#N43W080)
-  * [Environment N45W123](#N45W123)
-  * [Environment N47W124](#N47W124)
+  * [N17E073](#N17E073)
+  * [N43W080](#N43W080)
+  * [N45W123](#N45W123)
+  * [N47W124](#N47W124)
 
 <a name="abstract"></a>
 # Abstract
