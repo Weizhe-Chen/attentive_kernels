@@ -14,82 +14,82 @@ Robotic Information Gathering (RIG) relies on the uncertainty of a probabilistic
 
 ## Environment: N17E073
 
-<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N17E073.png" alt="drawing" width="60%"/>
+<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N17E073.png" alt="drawing" width="100%"/>
 
 ### Attentive Kernel
 
-<a href="https://www.youtube.com/embed/P92J6NmZeK0"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_ak.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/P92J6NmZeK0"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_ak.png" alt="drawing" width="100%"></a>
 
 ### RBF Kernel
 
-<a href="https://www.youtube.com/embed/_94lIe7usx8"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_rbf.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/_94lIe7usx8"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_rbf.png" alt="drawing" width="100%"></a>
 
 ### Gibbs Kernel
 
-<a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="100%"></a>
 
 ### Deep Kernel Learning
 
-<a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="100%"></a>
 
 ## Environment: N43W080
 
-<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N43W080.png" alt="drawing" width="60%"/>
+<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N43W080.png" alt="drawing" width="100%"/>
 
 ### Attentive Kernel
 
-<a href="https://www.youtube.com/embed/_4oyuKxFBkY"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_ak.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/_4oyuKxFBkY"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_ak.png" alt="drawing" width="100%"></a>
 
 ### RBF Kernel
 
-<a href="https://www.youtube.com/embed/lx8haGg0aCI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_rbf.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/lx8haGg0aCI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_rbf.png" alt="drawing" width="100%"></a>
 
 ### Gibbs Kernel
 
-<a href="https://www.youtube.com/embed/5yDTqPvQ9QM"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_gibbs.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/5yDTqPvQ9QM"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_gibbs.png" alt="drawing" width="100%"></a>
 
 ### Deep Kernel Learning
 
-<a href="https://www.youtube.com/embed/ZK28mCQYVUQ"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_dkl.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/ZK28mCQYVUQ"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N43W080_dkl.png" alt="drawing" width="100%"></a>
 
 
 ## Environment: N45W123
 
-<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N45W123.png" alt="drawing" width="60%"/>
+<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N45W123.png" alt="drawing" width="100%"/>
 
 ### Attentive Kernel
 
-<a href="https://www.youtube.com/embed/BtKDLO1asnk"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_ak.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/BtKDLO1asnk"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_ak.png" alt="drawing" width="100%"></a>
 
 ### RBF Kernel
 
-<a href="https://www.youtube.com/embed/eegdZR_M_zs"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_rbf.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/eegdZR_M_zs"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_rbf.png" alt="drawing" width="100%"></a>
 
 ### Gibbs Kernel
 
-<a href="https://www.youtube.com/embed/Z71hU4YbWs0"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_gibbs.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/Z71hU4YbWs0"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_gibbs.png" alt="drawing" width="100%"></a>
 
 ### Deep Kernel Learning
 
-<a href="https://www.youtube.com/embed/Qbk63_b2P1E"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_dkl.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/Qbk63_b2P1E"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N45W123_dkl.png" alt="drawing" width="100%"></a>
 
 
 ## Environment: N47W124
 
-<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N47W124.png" alg="drawing" width="60%"/>
+<img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N47W124.png" alg="drawing" width="100%"/>
 
 ### Attentive Kernel
 
-<a href="https://www.youtube.com/embed/CC9St05e9Ow"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_ak.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/CC9St05e9Ow"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_ak.png" alt="drawing" width="100%"></a>
 
 ### RBF Kernel
 
-<a href="https://www.youtube.com/embed/W1bnETwBtpI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_rbf.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/W1bnETwBtpI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_rbf.png" alt="drawing" width="100%"></a>
 
 ### Gibbs Kernel
 
-<a href="https://www.youtube.com/embed/mqtxNkIv6bI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_gibbs.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/mqtxNkIv6bI"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_gibbs.png" alt="drawing" width="100%"></a>
 
 ### Deep Kernel Learning
 
-<a href="https://www.youtube.com/embed/suYUdUDMzTE"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_dkl.png" alt="drawing" width="60%"></a>
+<a href="https://www.youtube.com/embed/suYUdUDMzTE"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N47W124_dkl.png" alt="drawing" width="100%"></a>
