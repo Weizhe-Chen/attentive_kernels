@@ -17,7 +17,7 @@ This repository contains the code for reproducing all the figures, animations, a
 
 # Getting Started
 
-This repository depends on [PyPolo](https://github.com/Weizhe-Chen/pypolo) -- an Informative Planning and Uncertainty-Aware Learning Python library that does all the heavy lifting. There is no extra requirements after installing PyPolo. We recommend using a virtual environment via `conda` or `mamba`. I personally prefer `mamba` because it provides the same interface but is much faster.
+This repository depends on [PyPolo](https://github.com/Weizhe-Chen/pypolo) -- an Informative Planning and Uncertainty-Aware Learning Python library -- that does all the heavy lifting. There is no extra requirements after installing PyPolo. We recommend using a virtual environment via `conda` or `mamba`. I personally prefer `mamba` over `conda` because `mamba` provides the same interface but is much faster.
 
 ```bash
 conda create -n pypolo python=3.8 pip -y
