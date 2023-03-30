@@ -32,7 +32,7 @@ conda create -n pypolo python=3.8 pip -y
 conda activate pypolo
 
 # Install PyPolo
-pip install pypolo
+pip install pypolo==0.0.3
 ```
 
 ## How can I reproduce the results?
