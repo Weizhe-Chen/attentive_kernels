@@ -90,7 +90,3 @@ Attentive Kernel | RBF Kernel
 Gibbs Kernel | Deep Kernel Learning
 :-------------------------:|:-------------------------:|
 <br><a href="https://www.youtube.com/embed/aZ5PXXW-94U"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_gibbs.png" alt="drawing" width="400" height="240"></a> | <br><a href="https://www.youtube.com/embed/l3lNihEuoQU"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/N17E073_dkl.png" alt="drawing" width="400" height="240"></a>
-
-# Known Issues
-* PyPolo depends on a Python package `bezier` [that does not support pip install on M1 Mac](https://github.com/dhermes/bezier/issues/276).
-
