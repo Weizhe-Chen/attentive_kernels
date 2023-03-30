@@ -25,13 +25,9 @@ We recommend using a virtual environment via `conda` or `mamba`.
 I personally prefer `mamba` over `conda` because `mamba` provides the same interface but is much faster.
 
 ```bash
-# mamba create -n pypolo python=3.8 pip -y
-conda create -n pypolo python=3.8 pip -y
-
-# mamba activate pypolo
+conda create -n pypolo python=3.8
 conda activate pypolo
-
-# Install PyPolo
+BEZIER_NO_EXTENSION=true pip install --upgrade bezier --no-binary=bezier
 pip install pypolo==0.0.3
 ```
 
@@ -68,6 +64,16 @@ README.md
 
 To reproduce the results in a folder, simply run the corresponding `reproduce.sh` shell script.
 The results will be saved to the automatically created `figures` and `outputs` folder in the current directory.
+
+You can also run a specific experiment rather than reproducing all the experiments.
+For example, the following commands run the Attentive Kernel in environment N17E073 with a myopic informative planner.
+
+```bash
+cd attentive_kernels/experiments
+python main.py --config ./configs/ak.yaml --env-name N17E073 --strategy myopic --seed 0
+# After running the experiment, we can animate the sampling process using the saved data in outputs/ folder.
+python animate.py --config ./configs/ak.yaml --env-name N17E073 --strategy myopic --seed 0
+```
 
 # Videos
 
