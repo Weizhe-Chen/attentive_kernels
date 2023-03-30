@@ -1,6 +1,6 @@
 # AK: Attentive Kernels for Information Gathering
 
-> **Great News**: this paper won the [Best Student Paper Award](https://roboticsconference.org/program/awards/) at RSS 2022!
+> **Great News**: this paper won the [Best Student Paper Award](https://roboticsconference.org/2022/program/awards/) at RSS 2022!
 
 This repository contains the code for reproducing all the figures, animations, and results in the following paper.
 ```bibtex
