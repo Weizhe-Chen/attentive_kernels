@@ -17,7 +17,7 @@ This repository contains the code for reproducing all the figures, animations, a
 
 # Getting Started
 
-This repository depends on [PyPolo](https://github.com/Weizhe-Chen/pypolo) -- an Informative Planning and Uncertainty-Aware Learning Python library -- that does all the heavy lifting. There is no extra requirements after installing PyPolo.
+This repository depends on [PyPolo](https://github.com/Weizhe-Chen/pypolo) -- a Python library for Robotic Information Gathering -- that does all the heavy lifting. There is no extra requirements after installing PyPolo.
 
 ## Create a virtual environment and install PyPolo
 
