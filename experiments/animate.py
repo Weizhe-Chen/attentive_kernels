@@ -33,17 +33,11 @@ def main():
                               log["stds"][:, index], "Uncertainty")
         visualizer.plot_image(args, axes[1, 1], caxes[1, 1],
                               log["errors"][:, index], "Error")
-        axes[1, 0].scatter(log["xs"][:num, 0],
-                           log["xs"][:num, 1],
-                           marker='.',
-                           color='k',
-                           alpha=0.6)
-        axes[1, 0].scatter(log["xs"][num - 1, 0],
-                           log["xs"][num - 1, 1],
-                           marker='*',
-                           color='w',
-                           alpha=0.9,
-                           s=200)
+        axes[1, 0].plot(log["xs"][:num, 0],
+                        log["xs"][:num, 1],
+                        '.-',
+                        color='k',
+                        alpha=0.8)
         visualizer.pause()
 
 
