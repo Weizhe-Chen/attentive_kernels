@@ -19,19 +19,30 @@ This repository contains the code for reproducing all the figures, animations, a
 
 This repository depends on [PyPolo](https://github.com/Weizhe-Chen/pypolo) -- a Python library for Robotic Information Gathering -- that does all the heavy lifting. There is no extra requirements after installing PyPolo.
 
-## Create a virtual environment and install PyPolo
+## Python Virtual Environment
 
 We recommend using a virtual environment via `conda` or `mamba`.
 I personally prefer `mamba` over `conda` because `mamba` provides the same interface but is much faster.
 
 ```bash
-conda create -n pypolo python=3.8
-conda activate pypolo
+conda create -n ak python=3.8
+conda activate ak
 BEZIER_NO_EXTENSION=true pip install --upgrade bezier --no-binary=bezier
 pip install pypolo==0.0.3
 ```
 
-## How can I reproduce the results?
+## Single-File Demo
+
+There is a single-file implementation in `attentive_kernels/demo/main.py` which does not rely on PyPolo.
+If you would like to quickly understand the Attentive Kernel and apply it to your application or if you feel overwhelmed by the PyPolo project structure, this single-file implementation might be a good starting point.
+
+```bash
+conda activate ak
+cd attentive_kernels/demo
+python main
+```
+
+## Reproducing The Paper Results
 
 This repository follows the following structure.
 The `data` folder is shared across different experiments.
