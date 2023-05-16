@@ -39,7 +39,7 @@ If you would like to quickly understand the Attentive Kernel and apply it to you
 ```bash
 conda activate ak
 cd attentive_kernels/demo
-python main
+python main.py
 ```
 
 ## Reproducing The Paper Results
