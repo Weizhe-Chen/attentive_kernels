@@ -17,38 +17,38 @@ This repository contains the code for reproducing all the figures, animations, a
 
 # Getting Started
 
-This repository depends on [PyPolo](https://github.com/Weizhe-Chen/pypolo) -- a Python library for Robotic Information Gathering -- that does all the heavy lifting. There is no extra requirements after installing PyPolo.
+1. Creating a Python virtual environment is recommended but not required. I personally prefer `mamba` over `conda` because `mamba` provides the same interface but is much faster.
 
-## Python Virtual Environment
+    ```bash
+    conda create -n ak python=3.8
+    conda activate ak
+    ```
 
-We recommend using a virtual environment via `conda` or `mamba`.
-I personally prefer `mamba` over `conda` because `mamba` provides the same interface but is much faster.
+2. Install PyPolo -- a Python library for Robotic Information Gathering.
 
-```bash
-conda create -n ak python=3.8
-conda activate ak
-BEZIER_NO_EXTENSION=true pip install --upgrade bezier --no-binary=bezier
-pip install pypolo==0.0.3
-```
+    > Note: Mac users might need to install the `bezier` library via `BEZIER_NO_EXTENSION=true pip install --upgrade bezier --no-binary=bezier`
 
-## Single-File Demo
+    ```bash
+    pip install pypolo==0.0.3
+    ```
 
-There is a single-file implementation in `attentive_kernels/demo/main.py` which does not rely on PyPolo.
-If you would like to quickly understand the Attentive Kernel and apply it to your application or if you feel overwhelmed by the PyPolo project structure, this single-file implementation might be a good starting point.
+    > Note: The Github repository [PyPolo](https://github.com/Weizhe-Chen/pypolo) has been constantly updated and is NOT compatible with this repository. Please use the PyPolo version specified above. The PyPolo code that corresponds to this paper can be found on https://pypi.org/project/pypolo/
 
-```bash
-conda activate ak
-cd attentive_kernels/demo
-python main.py
-```
+3. Run single-file demo to understand the Attentive Kernel. This demo does not rely on PyPolo.
 
-## Reproducing The Paper Results
+    ```bash
+    cd attentive_kernels/demo
+    python main.py
+    ```
+
+## Reproducing The Results
 
 This repository follows the following structure.
 The `data` folder is shared across different experiments.
 To keep minimum dependency, we have provided the preprocessed data.
 The pre-processing steps can be found in the commented code, which require some tricky-to-install packages such as `rasterio`.
 Each folder serves for one purpose, including benchmarking (`experiments`), ablation study (`ablation`), overfitting analysis (`overfitting`), sensitivity analysis (`sensitivity`), customed step function demo (`step`),  sin function demo (`sin`), and [Mount Saint Helens](https://en.wikipedia.org/wiki/Mount_St._Helens) volcano demo (`volcano`).
+Visualization of the weighting and membership functions can be found in the `sin` and `step` folders.
 
 ```bash
 data
@@ -89,7 +89,7 @@ python animate.py --config ./configs/ak.yaml --env-name N17E073 --strategy myopi
 # Videos
 
 <p align="center"><b>Field Experiments</b></p>
-<p align="center"><a href="https://www.youtube.com/watch?v=qpoxSF5S9zk"><img src="https://raw.githubusercontent.com/Weizhe-Chen/weizhe-chen.github.io/master/images/heron_quarry.png" alt="drawing" width="400" height="240"></a></p> 
+<p align="center"><a href="https://www.youtube.com/watch?v=qpoxSF5S9zk"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/play_buttons/field_experiment_cover.png" alt="drawing" width="400" height="240"></a></p> 
 
 <p align="center"><b>One Example Environment in Simulation</b></p>
 <p align="center"><img src="https://raw.githubusercontent.com/Weizhe-Chen/attentive_kernels/gh-pages/assets/envs/N17E073.png" width="400" height="240"/></p>
