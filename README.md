@@ -15,6 +15,8 @@ This repository contains the code for reproducing all the figures, animations, a
 } 
 ```
 
+If you encounter any issues or have any questions, please feel free to contact me at `chenweiz [at] iu.edu`. I am happy to help and will respond as soon as possible.
+
 # Getting Started
 
 1. Creating a Python virtual environment is recommended but not required. I personally prefer `mamba` over `conda` because `mamba` provides the same interface but is much faster.
